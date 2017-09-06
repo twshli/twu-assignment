@@ -28,5 +28,6 @@ public class Triangle {
     public static void main(String[] args) {
         System.out.println(Triangle.getOneAsterisk());
         System.out.println(Triangle.getHorizontalAsteriskLine(8));
+        System.out.println(Triangle.getVerticalAsteriskLine(3));
     }
 }
