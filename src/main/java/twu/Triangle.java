@@ -14,11 +14,15 @@ public class Triangle {
     }
 
     public static String getHorizontalAsteriskLine(int length) {
-        return String.join("", Collections.nCopies(length, STRING_ASTERISK));
+        return joinRepeatedString(STRING_ASTERISK, length, "");
     }
 
     public static String getVerticalAsteriskLine(int length) {
-        return String.join("\n", Collections.nCopies(length, STRING_ASTERISK));
+        return joinRepeatedString(STRING_ASTERISK, length, "\n");
+    }
+
+    private static String joinRepeatedString(String repeatedString, int count, String delimiter) {
+        return String.join(delimiter, Collections.nCopies(count, repeatedString));
     }
 
     public static void main(String[] args) {
