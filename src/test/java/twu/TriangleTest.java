@@ -14,4 +14,9 @@ public class TriangleTest {
     public void should_get_one_asterisk() throws Exception {
         assertThat(Triangle.getOneAsterisk(), is("*"));
     }
+
+    @Test
+    public void should_get_8_asterisks_while_draw_horizontal_line_with_length_8() throws Exception {
+        assertThat(Triangle.getHorizontalAsteriskLine(8), is("********"));
+    }
 }
