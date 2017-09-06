@@ -6,12 +6,15 @@ import java.util.Collections;
  * Created by Shli on 06/09/2017.
  */
 public class Triangle {
+
+    private static final String STRING_ASTERISK = "*";
+
     public static String getOneAsterisk() {
-        return "*";
+        return STRING_ASTERISK;
     }
 
     public static String getHorizontalAsteriskLine(int length) {
-        return String.join("", Collections.nCopies(length, "*"));
+        return String.join("", Collections.nCopies(length, STRING_ASTERISK));
     }
 
     public static void main(String[] args) {
