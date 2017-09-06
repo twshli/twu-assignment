@@ -34,8 +34,16 @@ public class Triangle {
     }
 
     public static void main(String[] args) {
+        System.out.println("Draw one asterisk: ");
         System.out.println(Triangle.getOneAsterisk());
+
+        System.out.println("Draw a horizontal line: ");
         System.out.println(Triangle.getHorizontalAsteriskLine(8));
+
+        System.out.println("Draw a vertical line: ");
         System.out.println(Triangle.getVerticalAsteriskLine(3));
+
+        System.out.println("Draw a right triangle: ");
+        System.out.println(Triangle.getAsteriskTriangle(3));
     }
 }
