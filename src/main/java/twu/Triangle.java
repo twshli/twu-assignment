@@ -17,6 +17,10 @@ public class Triangle {
         return String.join("", Collections.nCopies(length, STRING_ASTERISK));
     }
 
+    public static String getVerticalAsteriskLine(int length) {
+        return String.join("\n", Collections.nCopies(length, STRING_ASTERISK));
+    }
+
     public static void main(String[] args) {
         System.out.println(Triangle.getOneAsterisk());
         System.out.println(Triangle.getHorizontalAsteriskLine(8));
