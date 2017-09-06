@@ -1,6 +1,8 @@
 package twu;
 
 import java.util.Collections;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Created by Shli on 06/09/2017.
@@ -19,6 +21,12 @@ public class Triangle {
 
     public static String getVerticalAsteriskLine(int length) {
         return joinRepeatedString(STRING_ASTERISK, length, "\n");
+    }
+
+    public static String getAsteriskTriangle(int layer) {
+        return IntStream.range(1, layer + 1)
+                .mapToObj(Triangle::getHorizontalAsteriskLine)
+                .collect(Collectors.joining("\n"));
     }
 
     private static String joinRepeatedString(String repeatedString, int count, String delimiter) {
