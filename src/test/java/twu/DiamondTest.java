@@ -14,4 +14,14 @@ public class DiamondTest {
     public void should_get_1_asterisk_while_draw_triangle_with_1_layer() throws Exception {
         assertThat(Diamond.getTriangle(1), is("*"));
     }
+
+    @Test
+    public void should_get_asterisk_triangle_with_3_layers() throws Exception {
+        String triangle =
+                "  *\n" +
+                " ***\n" +
+                "*****";
+
+        assertThat(Diamond.getTriangle(3), is(triangle));
+    }
 }
