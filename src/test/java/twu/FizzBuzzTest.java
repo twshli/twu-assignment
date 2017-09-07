@@ -19,4 +19,9 @@ public class FizzBuzzTest {
     public void should_get_Fizz_given_3() throws Exception {
         assertThat(FizzBuzz.getAlias(3), is("Fizz"));
     }
+
+    @Test
+    public void should_get_Buzz_given_5() throws Exception {
+        assertThat(FizzBuzz.getAlias(5), is("Buzz"));
+    }
 }
