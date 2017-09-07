@@ -13,14 +13,26 @@ public class Diamond {
     private static final String SPACE = " ";
 
     public static String getTriangle(int layer) {
-        return IntStream.rangeClosed(1, layer)
-                .mapToObj(i -> createLayer(layer - i, i * 2 - 1))
-                .collect(Collectors.joining("\n"));
+        return compose(getHatTriangle(layer),
+                createLayer(0, layer * 2 - 1),
+                "");
     }
 
     public static String getDiamond(int n) {
-        return Stream.of(getTriangle(n), getInvertedTriangle(n))
+        return compose(getHatTriangle(n),
+                createLayer(0, n * 2 - 1),
+                getInvertedTriangle(n));
+    }
+
+    public static String compose(String top, String center, String bottom) {
+        return Stream.of(top, center, bottom)
                 .filter(s -> !s.isEmpty())
+                .collect(Collectors.joining("\n"));
+    }
+
+    private static String getHatTriangle(int layer) {
+        return IntStream.range(1, layer)
+                .mapToObj(i -> createLayer(layer - i, i * 2 - 1))
                 .collect(Collectors.joining("\n"));
     }
 
