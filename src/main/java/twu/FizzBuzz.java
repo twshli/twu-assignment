@@ -29,4 +29,8 @@ public class FizzBuzz {
     private static boolean isDivisible(int number, int divisor) {
         return (number % divisor == 0);
     }
+
+    public static void main(String[] args) {
+        System.out.println(FizzBuzz.getAliases(1, 100));
+    }
 }
