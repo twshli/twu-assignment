@@ -9,14 +9,15 @@ public class FizzBuzz {
     private static final String BUZZ = "Buzz";
 
     public static String getAlias(int num) {
-        if (num % 3 == 0) {
-            return FIZZ;
-        }
+        String alias = "";
 
-        if (num % 5 == 0) {
-            return BUZZ;
-        }
+        alias += (isDivisible(num, 3) ? FIZZ : "");
+        alias += (isDivisible(num, 5) ? BUZZ : "");
 
-        return String.valueOf(num);
+        return (alias.isEmpty() ? String.valueOf(num) : alias);
+    }
+
+    private static boolean isDivisible(int number, int divisor) {
+        return (number % divisor == 0);
     }
 }
