@@ -24,4 +24,16 @@ public class DiamondTest {
 
         assertThat(Diamond.getTriangle(3), is(triangle));
     }
+
+    @Test
+    public void should_get_asterisk_diamond_with_3_layers() throws Exception {
+        String diamond =
+                "  *\n" +
+                " ***\n" +
+                "*****\n" +
+                " ***\n" +
+                "  *";
+
+        assertThat(Diamond.getDiamond(3), is(diamond));
+    }
 }

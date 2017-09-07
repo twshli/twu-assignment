@@ -17,6 +17,16 @@ public class Diamond {
                 .collect(Collectors.joining("\n"));
     }
 
+    public static String getDiamond(int n) {
+        return String.join("\n", getTriangle(n), getInvertedTriangle(n));
+    }
+
+    private static String getInvertedTriangle(int layer) {
+        return IntStream.range(1, layer)
+                .mapToObj(i -> createLayer(i, (layer - i) * 2 - 1))
+                .collect(Collectors.joining("\n"));
+    }
+
     private static String createLayer(int spaceCount, int asteriskCount) {
         return createRepeatedString(SPACE, spaceCount) +
                 createRepeatedString(ASTERISK, asteriskCount);
