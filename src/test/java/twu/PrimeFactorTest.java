@@ -2,6 +2,8 @@ package twu;
 
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -13,5 +15,13 @@ public class PrimeFactorTest {
     @Test
     public void should_get_no_primes_for_1() throws Exception {
         assertThat(PrimeFactor.getPrimes(1).size(), is(0));
+    }
+
+    @Test
+    public void should_get_prime_2_for_max_number_2() throws Exception {
+        List<Integer> primes = PrimeFactor.getPrimes(2);
+
+        assertThat(primes.size(), is(1));
+        assertThat(primes.get(0), is(2));
     }
 }
