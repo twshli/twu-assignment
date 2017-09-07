@@ -56,4 +56,15 @@ public class Diamond {
     private static String createRepeatedString(String string, int repeated) {
         return String.join("", Collections.nCopies(repeated, string));
     }
+
+    public static void main(String[] args) {
+        System.out.println("Isosceles triangle: ");
+        System.out.println(Diamond.getTriangle(3));
+
+        System.out.println("Diamond: ");
+        System.out.println(Diamond.getDiamond(3));
+
+        System.out.println("Diamond with name: ");
+        System.out.println(Diamond.getNameDiamond(3, "Bill"));
+    }
 }
