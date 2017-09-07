@@ -25,7 +25,9 @@ public class Diamond {
     }
 
     public static String getNameDiamond(int n, String name) {
-        return name;
+        return compose(getHatTriangle(n),
+                name,
+                getInvertedTriangle(n));
     }
 
     public static String compose(String top, String center, String bottom) {
