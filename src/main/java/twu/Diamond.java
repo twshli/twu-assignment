@@ -3,6 +3,7 @@ package twu;
 import java.util.Collections;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * Created by Shli on 06/09/2017.
@@ -18,7 +19,9 @@ public class Diamond {
     }
 
     public static String getDiamond(int n) {
-        return String.join("\n", getTriangle(n), getInvertedTriangle(n));
+        return Stream.of(getTriangle(n), getInvertedTriangle(n))
+                .filter(s -> !s.isEmpty())
+                .collect(Collectors.joining("\n"));
     }
 
     private static String getInvertedTriangle(int layer) {

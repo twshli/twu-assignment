@@ -26,6 +26,11 @@ public class DiamondTest {
     }
 
     @Test
+    public void should_get_1_asterisk_while_draw_diamond_with_1_layer() throws Exception {
+        assertThat(Diamond.getDiamond(1), is("*"));
+    }
+
+    @Test
     public void should_get_asterisk_diamond_with_3_layers() throws Exception {
         String diamond =
                 "  *\n" +
