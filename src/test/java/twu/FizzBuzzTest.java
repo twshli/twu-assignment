@@ -29,4 +29,9 @@ public class FizzBuzzTest {
     public void should_get_FizzBuzz_given_3x5() throws Exception {
         assertThat(FizzBuzz.getAlias(3 * 5), is("FizzBuzz"));
     }
+
+    @Test
+    public void should_get_aliases_from_3_through_5() throws Exception {
+        assertThat(FizzBuzz.getAliases(3, 5), is("Fizz\n4\nBuzz"));
+    }
 }
