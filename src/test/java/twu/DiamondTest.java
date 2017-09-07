@@ -41,4 +41,9 @@ public class DiamondTest {
 
         assertThat(Diamond.getDiamond(3), is(diamond));
     }
+
+    @Test
+    public void should_get_name_while_draw_name_diamond_with_1_layer() throws Exception {
+        assertThat(Diamond.getNameDiamond(1, "Bill"), is("Bill"));
+    }
 }

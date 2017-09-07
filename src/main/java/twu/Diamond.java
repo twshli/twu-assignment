@@ -24,6 +24,10 @@ public class Diamond {
                 getInvertedTriangle(n));
     }
 
+    public static String getNameDiamond(int n, String name) {
+        return name;
+    }
+
     public static String compose(String top, String center, String bottom) {
         return Stream.of(top, center, bottom)
                 .filter(s -> !s.isEmpty())
