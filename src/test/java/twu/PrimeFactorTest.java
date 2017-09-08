@@ -33,4 +33,11 @@ public class PrimeFactorTest {
         assertThat(primes.get(0), is(2));
         assertThat(primes.get(1), is(3));
     }
+
+    @Test
+    public void should_get_no_prime_factor_for_1() throws Exception {
+        List<Integer> factors = PrimeFactor.generate(1);
+
+        assertThat(factors.size(), is(0));
+    }
 }

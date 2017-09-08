@@ -8,6 +8,12 @@ import java.util.List;
  */
 public class PrimeFactor {
 
+    public static List<Integer> generate(int num) {
+        List<Integer> factors = new LinkedList<>();
+
+        return factors;
+    }
+
     public static List<Integer> getPrimes(int maxNum) {
         List<Integer> primes = new LinkedList<>();
 
