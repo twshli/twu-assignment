@@ -30,4 +30,12 @@ public class PrimeFactor {
     private static boolean isDivisible(int num, List<Integer> primes) {
         return primes.stream().anyMatch(prime -> num % prime == 0);
     }
+
+    public static void main(String[] args) {
+        System.out.println("Prime factors for 1: ");
+        PrimeFactor.generate(1).forEach(System.out::println);
+
+        System.out.println("Prime factors for 30: ");
+        PrimeFactor.generate(30).forEach(System.out::println);
+    }
 }
