@@ -2,6 +2,7 @@ package twu;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Shli on 08/09/2017.
@@ -9,9 +10,9 @@ import java.util.List;
 public class PrimeFactor {
 
     public static List<Integer> generate(int num) {
-        List<Integer> factors = new LinkedList<>();
-
-        return factors;
+        return getPrimes(num).stream()
+                .filter(prime -> num % prime == 0)
+                .collect(Collectors.toList());
     }
 
     public static List<Integer> getPrimes(int maxNum) {

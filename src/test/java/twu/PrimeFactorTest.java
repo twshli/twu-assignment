@@ -40,4 +40,13 @@ public class PrimeFactorTest {
 
         assertThat(factors.size(), is(0));
     }
+
+    @Test
+    public void should_get_prime_factor_2_and_3_for_12() throws Exception {
+        List<Integer> factors = PrimeFactor.generate(12);
+
+        assertThat(factors.size(), is(2));
+        assertThat(factors.get(0), is(2));
+        assertThat(factors.get(1), is(3));
+    }
 }
