@@ -24,4 +24,13 @@ public class PrimeFactorTest {
         assertThat(primes.size(), is(1));
         assertThat(primes.get(0), is(2));
     }
+
+    @Test
+    public void should_get_prime_2_and_3_for_max_number_4() throws Exception {
+        List<Integer> primes = PrimeFactor.getPrimes(4);
+
+        assertThat(primes.size(), is(2));
+        assertThat(primes.get(0), is(2));
+        assertThat(primes.get(1), is(3));
+    }
 }

@@ -2,7 +2,6 @@ package twu;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 /**
  * Created by Shli on 08/09/2017.
@@ -12,11 +11,16 @@ public class PrimeFactor {
     public static List<Integer> getPrimes(int maxNum) {
         List<Integer> primes = new LinkedList<>();
 
-        if (maxNum <= 1) {
-            return primes;
+        for (int num = 2; num <= maxNum; ++num) {
+            if (!isDivisible(num, primes)) {
+                primes.add(num);
+            }
         }
-        primes.add(2);
 
         return primes;
+    }
+
+    private static boolean isDivisible(int num, List<Integer> primes) {
+        return primes.stream().anyMatch(prime -> num % prime == 0);
     }
 }
